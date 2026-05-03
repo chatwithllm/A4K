@@ -1,0 +1,47 @@
+[
+  {
+    "id": "numbers-story-count-01",
+    "mode": "baby",
+    "subject": "numbers",
+    "type": "story",
+    "frames": [
+      { "emoji": "1️⃣", "text": { "en": "One! 🍌", "te": "ఒకటి! 🍌", "es": "¡Uno! 🍌" } },
+      { "emoji": "2️⃣", "text": { "en": "Two! ⭐⭐", "te": "రెండు! ⭐⭐", "es": "¡Dos! ⭐⭐" } },
+      { "emoji": "3️⃣", "text": { "en": "Three! 🍎🍎🍎", "te": "మూడు! 🍎🍎🍎", "es": "¡Tres! 🍎🍎🍎" } }
+    ],
+    "xp": 15,
+    "character_reaction": { "correct": "cheer", "wrong": "encourage" }
+  },
+  {
+    "id": "numbers-quiz-stars-01",
+    "mode": "baby",
+    "subject": "numbers",
+    "type": "quiz",
+    "content": { "en": "How many stars? ⭐⭐⭐", "te": "ఎన్ని నక్షత్రాలు? ⭐⭐⭐", "es": "¿Cuántas estrellas? ⭐⭐⭐" },
+    "answer": "3",
+    "choices": ["2", "3", "4"],
+    "choiceLabels": [
+      { "en": "2", "te": "2", "es": "2" },
+      { "en": "3", "te": "3", "es": "3" },
+      { "en": "4", "te": "4", "es": "4" }
+    ],
+    "xp": 10,
+    "character_reaction": { "correct": "cheer", "wrong": "encourage" }
+  },
+  {
+    "id": "numbers-tap-two-01",
+    "mode": "baby",
+    "subject": "numbers",
+    "type": "tap",
+    "content": { "en": "Tap the number 2!", "te": "2 సంఖ్యను నొక్కు!", "es": "¡Toca el número 2!" },
+    "items": [
+      { "id": "1", "emoji": "1️⃣", "label": { "en": "1", "te": "1", "es": "1" } },
+      { "id": "2", "emoji": "2️⃣", "label": { "en": "2", "te": "2", "es": "2" } },
+      { "id": "3", "emoji": "3️⃣", "label": { "en": "3", "te": "3", "es": "3" } },
+      { "id": "4", "emoji": "4️⃣", "label": { "en": "4", "te": "4", "es": "4" } }
+    ],
+    "answer": "2",
+    "xp": 10,
+    "character_reaction": { "correct": "cheer", "wrong": "encourage" }
+  }
+]
