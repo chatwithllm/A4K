@@ -21,7 +21,7 @@ export function useProgress() {
 
   const isLessonDone = useCallback(async (profileId: number, lessonId: string): Promise<boolean> => {
     const count = await db.progress
-      .where({ profileId, lessonId })
+      .where('[profileId+lessonId]').equals([profileId, lessonId])
       .count()
     return count > 0
   }, [])
