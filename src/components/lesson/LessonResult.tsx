@@ -1,22 +1,25 @@
 import { motion } from 'framer-motion'
-import { Foxy } from '../mascot/Foxy'
+import { Foxy, type FoxyMood } from '../mascot/Foxy'
+import type { CharacterReaction } from '../../content/types'
 
 interface LessonResultProps {
-  correct: boolean
+  foxyMood: CharacterReaction
   correctLabel: string
   onNext: () => void
   nextLabel: string
   resultLabel: string
+  correct: boolean
 }
 
-export function LessonResult({ correct, correctLabel, onNext, nextLabel, resultLabel }: LessonResultProps) {
+export function LessonResult({ foxyMood, correct, correctLabel, onNext, nextLabel, resultLabel }: LessonResultProps) {
+  const mood: FoxyMood = foxyMood === 'neutral' ? 'idle' : foxyMood
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       className="flex flex-col items-center gap-6 p-8"
     >
-      <Foxy mood={correct ? 'cheer' : 'encourage'} size={100} />
+      <Foxy mood={mood} size={100} />
       <p className="text-2xl font-bold text-center">{resultLabel}</p>
       {!correct && (
         <p className="text-gray-500 text-sm">Answer: {correctLabel}</p>

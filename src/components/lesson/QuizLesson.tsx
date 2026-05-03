@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { Foxy } from '../mascot/Foxy'
 import { LessonResult } from './LessonResult'
 import type { QuizLesson as QuizLessonType } from '../../content/types'
@@ -20,6 +21,7 @@ interface QuizLessonProps {
 }
 
 export function QuizLesson({ lesson, language, onComplete }: QuizLessonProps) {
+  const { t } = useTranslation()
   const [answered, setAnswered] = useState(false)
   const [correct, setCorrect] = useState(false)
 
@@ -39,10 +41,11 @@ export function QuizLesson({ lesson, language, onComplete }: QuizLessonProps) {
     return (
       <LessonResult
         correct={correct}
+        foxyMood={correct ? lesson.character_reaction.correct : lesson.character_reaction.wrong}
         correctLabel={correctLabel}
         onNext={() => {}}
-        nextLabel="Next"
-        resultLabel={correct ? 'Amazing! 🌟' : 'Try again!'}
+        nextLabel={t('lesson_next')}
+        resultLabel={correct ? t('lesson_correct') : t('lesson_wrong')}
       />
     )
   }
