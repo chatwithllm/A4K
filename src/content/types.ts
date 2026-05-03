@@ -18,10 +18,40 @@ export interface QuizLesson {
   choices: string[]
   choiceLabels?: LocalisedString[]
   xp: number
-  character_reaction: {
-    correct: CharacterReaction
-    wrong: CharacterReaction
-  }
+  character_reaction: { correct: CharacterReaction; wrong: CharacterReaction }
 }
 
-export type Lesson = QuizLesson
+export interface StoryFrame {
+  emoji: string
+  text: LocalisedString
+}
+
+export interface StoryLesson {
+  id: string
+  mode: LessonMode
+  subject: string
+  type: 'story'
+  frames: StoryFrame[]
+  xp: number
+  character_reaction: { correct: CharacterReaction; wrong: CharacterReaction }
+}
+
+export interface TapItem {
+  id: string
+  emoji: string
+  label: LocalisedString
+}
+
+export interface TapLesson {
+  id: string
+  mode: LessonMode
+  subject: string
+  type: 'tap'
+  content: LocalisedString
+  items: TapItem[]
+  answer: string
+  xp: number
+  character_reaction: { correct: CharacterReaction; wrong: CharacterReaction }
+}
+
+export type Lesson = QuizLesson | StoryLesson | TapLesson
