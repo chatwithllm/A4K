@@ -12,6 +12,7 @@ type Language = 'en' | 'te' | 'es'
 export default function App() {
   const [screen, setScreen] = useState<Screen>('mode-select')
   const [activeLessons, setActiveLessons] = useState<Lesson[]>([])
+  // Language switching is wired to all components; selector lives in admin panel (Phase 4)
   const [language] = useState<Language>('en')
 
   function handleSubjectSelect(subject: string) {

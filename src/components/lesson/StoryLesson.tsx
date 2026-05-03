@@ -15,6 +15,7 @@ export function StoryLesson({ lesson, language, onComplete }: StoryLessonProps) 
   const [frameIndex, setFrameIndex] = useState(0)
 
   const frame = lesson.frames[frameIndex]
+  if (!frame) return null
 
   function handleNext() {
     if (frameIndex < lesson.frames.length - 1) {

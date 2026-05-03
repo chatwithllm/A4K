@@ -97,5 +97,7 @@ export function LessonSequencer({ lessons, language, onAllComplete }: LessonSequ
     )
   }
 
+  // TypeScript: lesson is `never` here if all Lesson union branches are handled above
+  void (lesson as never)
   return null
 }
