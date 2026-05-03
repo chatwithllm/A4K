@@ -1,0 +1,47 @@
+[
+  {
+    "id": "letters-story-a-01",
+    "mode": "baby",
+    "subject": "letters",
+    "type": "story",
+    "frames": [
+      { "emoji": "🅰️", "text": { "en": "This is the letter A!", "te": "ఇది A అక్షరం!", "es": "¡Esta es la letra A!" } },
+      { "emoji": "🍎", "text": { "en": "A is for Apple!", "te": "A అంటే Apple — ఆపిల్!", "es": "¡A es para Manzana!" } },
+      { "emoji": "🐜", "text": { "en": "A is also for Ant!", "te": "A అంటే Ant కూడా — చీమ!", "es": "¡A también es para Hormiga!" } }
+    ],
+    "xp": 15,
+    "character_reaction": { "correct": "cheer", "wrong": "encourage" }
+  },
+  {
+    "id": "letters-quiz-first-01",
+    "mode": "baby",
+    "subject": "letters",
+    "type": "quiz",
+    "content": { "en": "Which letter comes first? 🔤", "te": "ఏ అక్షరం మొదట వస్తుంది? 🔤", "es": "¿Qué letra viene primero? 🔤" },
+    "answer": "A",
+    "choices": ["A", "B", "C"],
+    "choiceLabels": [
+      { "en": "A", "te": "A", "es": "A" },
+      { "en": "B", "te": "B", "es": "B" },
+      { "en": "C", "te": "C", "es": "C" }
+    ],
+    "xp": 10,
+    "character_reaction": { "correct": "cheer", "wrong": "encourage" }
+  },
+  {
+    "id": "letters-tap-b-01",
+    "mode": "baby",
+    "subject": "letters",
+    "type": "tap",
+    "content": { "en": "Tap the letter B!", "te": "B అక్షరాన్ని నొక్కు!", "es": "¡Toca la letra B!" },
+    "items": [
+      { "id": "A", "emoji": "A", "label": { "en": "A", "te": "A", "es": "A" } },
+      { "id": "B", "emoji": "B", "label": { "en": "B", "te": "B", "es": "B" } },
+      { "id": "C", "emoji": "C", "label": { "en": "C", "te": "C", "es": "C" } },
+      { "id": "D", "emoji": "D", "label": { "en": "D", "te": "D", "es": "D" } }
+    ],
+    "answer": "B",
+    "xp": 10,
+    "character_reaction": { "correct": "cheer", "wrong": "encourage" }
+  }
+]
