@@ -12,5 +12,8 @@
   "lesson_wrong": "¡Inténtalo de nuevo!",
   "lesson_next": "Siguiente",
   "lesson_done": "¡Lección completa!",
-  "answer_label": "Respuesta"
+  "answer_label": "Respuesta",
+  "subject_complete": "¡Todo hecho! 🎉",
+  "xp_earned": "¡Ganaste {{xp}} XP!",
+  "back_home": "Volver al inicio"
 }
