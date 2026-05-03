@@ -1,0 +1,47 @@
+[
+  {
+    "id": "animals-quiz-moo-01",
+    "mode": "baby",
+    "subject": "animals",
+    "type": "quiz",
+    "content": { "en": "Which animal says MOO? 🐮", "te": "ఏ జంతువు MOO అంటుంది? 🐮", "es": "¿Qué animal dice MUU? 🐮" },
+    "answer": "cow",
+    "choices": ["cow", "dog", "cat"],
+    "choiceLabels": [
+      { "en": "Cow 🐮", "te": "ఆవు 🐮", "es": "Vaca 🐮" },
+      { "en": "Dog 🐕", "te": "కుక్క 🐕", "es": "Perro 🐕" },
+      { "en": "Cat 🐱", "te": "పిల్లి 🐱", "es": "Gato 🐱" }
+    ],
+    "xp": 10,
+    "character_reaction": { "correct": "cheer", "wrong": "encourage" }
+  },
+  {
+    "id": "animals-tap-elephant-01",
+    "mode": "baby",
+    "subject": "animals",
+    "type": "tap",
+    "content": { "en": "Tap the elephant!", "te": "ఏనుగును నొక్కు!", "es": "¡Toca el elefante!" },
+    "items": [
+      { "id": "elephant", "emoji": "🐘", "label": { "en": "Elephant", "te": "ఏనుగు",  "es": "Elefante" } },
+      { "id": "lion",     "emoji": "🦁", "label": { "en": "Lion",     "te": "సింహం",  "es": "León"     } },
+      { "id": "giraffe",  "emoji": "🦒", "label": { "en": "Giraffe",  "te": "జిరాఫ్", "es": "Jirafa"   } },
+      { "id": "monkey",   "emoji": "🐒", "label": { "en": "Monkey",   "te": "కోతి",   "es": "Mono"     } }
+    ],
+    "answer": "elephant",
+    "xp": 10,
+    "character_reaction": { "correct": "cheer", "wrong": "encourage" }
+  },
+  {
+    "id": "animals-story-lion-01",
+    "mode": "baby",
+    "subject": "animals",
+    "type": "story",
+    "frames": [
+      { "emoji": "🦁", "text": { "en": "Meet Lion!", "te": "సింహాన్ని చూడు!", "es": "¡Conoce al León!" } },
+      { "emoji": "🌿", "text": { "en": "Lions are big cats!", "te": "సింహాలు పెద్ద పిల్లులు!", "es": "¡Los leones son gatos grandes!" } },
+      { "emoji": "🌍", "text": { "en": "They live in Africa!", "te": "అవి ఆఫ్రికాలో నివసిస్తాయి!", "es": "¡Viven en África!" } }
+    ],
+    "xp": 15,
+    "character_reaction": { "correct": "cheer", "wrong": "encourage" }
+  }
+]
