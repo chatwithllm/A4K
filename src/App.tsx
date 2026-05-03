@@ -1,24 +1,40 @@
 import { useState } from 'react'
+import { ModeSelector } from './ModeSelector'
+import { BabyHome } from './modes/baby/BabyHome'
+import { QuizLesson } from './components/lesson/QuizLesson'
+import colorsContent from './content/baby/colors.json'
+import type { QuizLesson as QuizLessonType } from './content/types'
+import './i18n/index'
 
-function App() {
-  const [count, setCount] = useState(0)
+type Screen = 'mode-select' | 'baby-home' | 'lesson'
+type Language = 'en' | 'te' | 'es'
 
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-4xl font-bold mb-4 text-gray-800">KidsSpark</h1>
-        <p className="text-lg text-gray-600 mb-6">
-          A kids educational PWA with two modes and trilingual support.
-        </p>
-        <button
-          onClick={() => setCount((count) => count + 1)}
-          className="px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-        >
-          Count is {count}
-        </button>
-      </div>
-    </div>
-  )
+export default function App() {
+  const [screen, setScreen] = useState<Screen>('mode-select')
+  const [activeLesson, setActiveLesson] = useState<QuizLessonType | null>(null)
+  const [language] = useState<Language>('en')
+
+  function handleSubjectSelect(subject: string) {
+    if (subject === 'colors') {
+      setActiveLesson((colorsContent as QuizLessonType[])[0])
+      setScreen('lesson')
+    }
+  }
+
+  if (screen === 'mode-select') {
+    return <ModeSelector onSelect={(mode) => mode === 'baby' && setScreen('baby-home')} />
+  }
+  if (screen === 'baby-home') {
+    return <BabyHome language={language} onSelectSubject={handleSubjectSelect} />
+  }
+  if (screen === 'lesson' && activeLesson) {
+    return (
+      <QuizLesson
+        lesson={activeLesson}
+        language={language}
+        onComplete={() => setScreen('baby-home')}
+      />
+    )
+  }
+  return null
 }
-
-export default App
