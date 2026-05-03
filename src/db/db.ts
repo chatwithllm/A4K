@@ -10,8 +10,8 @@ class KidsSparkDB extends Dexie {
     super('KidsSparkDB')
     this.version(1).stores({
       profiles: '++id, mode, language',
-      progress: '++id, profileId, lessonId, completedAt',
-      settings: '++id',
+      progress: '++id, profileId, lessonId, completedAt, [profileId+lessonId]',
+      settings: 'id',
     })
   }
 }

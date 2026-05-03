@@ -23,7 +23,7 @@ export interface Progress {
 }
 
 export interface Settings {
-  id?: number
+  id: 1  // singleton row — always written/read with id=1
   adminPin: string
   aiApiKeyEncrypted: string
   appVersion: string
