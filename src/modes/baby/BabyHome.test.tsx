@@ -9,6 +9,9 @@ describe('BabyHome', () => {
     expect(screen.getByRole('button', { name: /colors/i })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: /letters/i })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: /numbers/i })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /animals/i })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /emotions/i })).toBeInTheDocument()
+    expect(screen.getAllByRole('button')).toHaveLength(5)
   })
 
   it('calls onSelectSubject when tile tapped', () => {
