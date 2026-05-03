@@ -12,9 +12,10 @@ const SUBJECTS = [
 interface BabyHomeProps {
   language: 'en' | 'te' | 'es'
   onSelectSubject: (subject: string) => void
+  disabledSubjects?: Set<string>
 }
 
-export function BabyHome({ language, onSelectSubject }: BabyHomeProps) {
+export function BabyHome({ language, onSelectSubject, disabledSubjects }: BabyHomeProps) {
   return (
     <div className="min-h-screen bg-amber-50 flex flex-col items-center py-8 px-4">
       <motion.div
@@ -26,21 +27,26 @@ export function BabyHome({ language, onSelectSubject }: BabyHomeProps) {
       </motion.div>
 
       <div className="grid grid-cols-2 gap-4 w-full max-w-xs">
-        {SUBJECTS.map((subject, i) => (
-          <motion.button
-            key={subject.id}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: i * 0.08 }}
-            whileTap={{ scale: 0.93 }}
-            onClick={() => onSelectSubject(subject.id)}
-            aria-label={subject.labels[language]}
-            className="bg-white rounded-2xl shadow-md p-5 flex flex-col items-center gap-2 text-amber-900 font-bold text-sm"
-          >
-            <span className="text-4xl">{subject.emoji}</span>
-            <span>{subject.labels[language]}</span>
-          </motion.button>
-        ))}
+        {SUBJECTS.map((subject, i) => {
+          const isDisabled = disabledSubjects?.has(subject.id)
+          return (
+            <motion.button
+              key={subject.id}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: i * 0.08 }}
+              whileTap={{ scale: 0.93 }}
+              onClick={() => onSelectSubject(subject.id)}
+              disabled={isDisabled}
+              aria-label={subject.labels[language]}
+              className={`bg-white rounded-2xl shadow-md p-5 flex flex-col items-center gap-2 text-amber-900 font-bold text-sm${isDisabled ? ' opacity-50 cursor-not-allowed' : ''}`}
+            >
+              <span className="text-4xl">{subject.emoji}</span>
+              <span>{subject.labels[language]}</span>
+              {isDisabled && <span className="text-xs font-normal text-gray-400">Soon</span>}
+            </motion.button>
+          )
+        })}
       </div>
     </div>
   )

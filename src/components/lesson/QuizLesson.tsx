@@ -18,9 +18,10 @@ interface QuizLessonProps {
   lesson: QuizLessonType
   language: 'en' | 'te' | 'es'
   onComplete: (result: { score: number; xpEarned: number }) => void
+  onNext?: () => void
 }
 
-export function QuizLesson({ lesson, language, onComplete }: QuizLessonProps) {
+export function QuizLesson({ lesson, language, onComplete, onNext = () => {} }: QuizLessonProps) {
   const { t } = useTranslation()
   const [answered, setAnswered] = useState(false)
   const [correct, setCorrect] = useState(false)
@@ -43,7 +44,7 @@ export function QuizLesson({ lesson, language, onComplete }: QuizLessonProps) {
         correct={correct}
         foxyMood={correct ? lesson.character_reaction.correct : lesson.character_reaction.wrong}
         correctLabel={correctLabel}
-        onNext={() => {}}
+        onNext={onNext}
         nextLabel={t('lesson_next')}
         resultLabel={correct ? t('lesson_correct') : t('lesson_wrong')}
       />

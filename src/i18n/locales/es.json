@@ -11,5 +11,6 @@
   "lesson_correct": "¡Increíble!",
   "lesson_wrong": "¡Inténtalo de nuevo!",
   "lesson_next": "Siguiente",
-  "lesson_done": "¡Lección completa!"
+  "lesson_done": "¡Lección completa!",
+  "answer_label": "Respuesta"
 }

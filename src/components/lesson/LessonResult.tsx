@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { Foxy, type FoxyMood } from '../mascot/Foxy'
 import type { CharacterReaction } from '../../content/types'
 
@@ -12,6 +13,7 @@ interface LessonResultProps {
 }
 
 export function LessonResult({ foxyMood, correct, correctLabel, onNext, nextLabel, resultLabel }: LessonResultProps) {
+  const { t } = useTranslation()
   const mood: FoxyMood = foxyMood === 'neutral' ? 'idle' : foxyMood
   return (
     <motion.div
@@ -22,7 +24,7 @@ export function LessonResult({ foxyMood, correct, correctLabel, onNext, nextLabe
       <Foxy mood={mood} size={100} />
       <p className="text-2xl font-bold text-center">{resultLabel}</p>
       {!correct && (
-        <p className="text-gray-500 text-sm">Answer: {correctLabel}</p>
+        <p className="text-gray-500 text-sm">{t('answer_label')}: {correctLabel}</p>
       )}
       <button
         onClick={onNext}

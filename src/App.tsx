@@ -25,7 +25,7 @@ export default function App() {
     return <ModeSelector onSelect={(mode) => mode === 'baby' && setScreen('baby-home')} />
   }
   if (screen === 'baby-home') {
-    return <BabyHome language={language} onSelectSubject={handleSubjectSelect} />
+    return <BabyHome language={language} onSelectSubject={handleSubjectSelect} disabledSubjects={new Set(['letters', 'numbers', 'animals', 'emotions'])} />
   }
   if (screen === 'lesson' && activeLesson) {
     return (
@@ -33,6 +33,7 @@ export default function App() {
         lesson={activeLesson}
         language={language}
         onComplete={() => setScreen('baby-home')}
+        onNext={() => setScreen('baby-home')}
       />
     )
   }

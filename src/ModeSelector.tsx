@@ -20,10 +20,12 @@ export function ModeSelector({ onSelect }: ModeSelectorProps) {
         <motion.button
           whileTap={{ scale: 0.94 }}
           onClick={() => onSelect('explorer')}
-          className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-6 px-10 rounded-3xl text-xl shadow-lg flex flex-col items-center gap-2"
+          disabled
+          className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-6 px-10 rounded-3xl text-xl shadow-lg flex flex-col items-center gap-2 opacity-50 cursor-not-allowed"
         >
           <span className="text-5xl">🤖</span>
           Explorer Mode
+          <span className="block text-sm font-normal opacity-75 mt-1">Coming soon</span>
         </motion.button>
       </div>
     </div>
