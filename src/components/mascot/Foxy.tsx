@@ -1,13 +1,13 @@
-import { motion } from 'framer-motion'
+import { motion, type TargetAndTransition } from 'framer-motion'
 
-type FoxyMood = 'idle' | 'cheer' | 'encourage' | 'talk'
+export type FoxyMood = 'idle' | 'cheer' | 'encourage' | 'talk'
 
 interface FoxyProps {
   mood?: FoxyMood
   size?: number
 }
 
-const moodAnimations: Record<FoxyMood, object> = {
+const moodAnimations: Record<FoxyMood, TargetAndTransition> = {
   idle: {
     y: [0, -6, 0],
     transition: { duration: 2, repeat: Infinity, ease: 'easeInOut' },
