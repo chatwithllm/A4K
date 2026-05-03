@@ -1,0 +1,15 @@
+{
+  "app_name": "కిడ్స్‌స్పార్క్",
+  "select_mode": "ఈరోజు ఎవరు నేర్చుకుంటున్నారు?",
+  "baby_mode": "బేబీ మోడ్",
+  "explorer_mode": "ఎక్స్‌ప్లోరర్ మోడ్",
+  "subject_letters": "అక్షరాలు",
+  "subject_numbers": "సంఖ్యలు",
+  "subject_colors": "రంగులు",
+  "subject_animals": "జంతువులు",
+  "subject_emotions": "భావాలు",
+  "lesson_correct": "అద్భుతం!",
+  "lesson_wrong": "మళ్ళీ ప్రయత్నించు!",
+  "lesson_next": "తదుపరి",
+  "lesson_done": "పాఠం పూర్తయింది!"
+}

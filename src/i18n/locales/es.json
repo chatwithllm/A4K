@@ -1,0 +1,15 @@
+{
+  "app_name": "KidsSpark",
+  "select_mode": "¿Quién aprende hoy?",
+  "baby_mode": "Modo Bebé",
+  "explorer_mode": "Modo Explorador",
+  "subject_letters": "Letras",
+  "subject_numbers": "Números",
+  "subject_colors": "Colores",
+  "subject_animals": "Animales",
+  "subject_emotions": "Emociones",
+  "lesson_correct": "¡Increíble!",
+  "lesson_wrong": "¡Inténtalo de nuevo!",
+  "lesson_next": "Siguiente",
+  "lesson_done": "¡Lección completa!"
+}
