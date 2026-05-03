@@ -1,0 +1,47 @@
+[
+  {
+    "id": "emotions-story-feelings-01",
+    "mode": "baby",
+    "subject": "emotions",
+    "type": "story",
+    "frames": [
+      { "emoji": "😊", "text": { "en": "Sometimes we feel happy!", "te": "కొన్నిసార్లు మనం సంతోషంగా ఉంటాం!", "es": "¡A veces nos sentimos felices!" } },
+      { "emoji": "😢", "text": { "en": "Sometimes we feel sad.", "te": "కొన్నిసార్లు మనం దుఃఖంగా ఉంటాం.", "es": "A veces nos sentimos tristes." } },
+      { "emoji": "🤗", "text": { "en": "All feelings are OK!", "te": "అన్ని భావాలు సరైనవే!", "es": "¡Todos los sentimientos están bien!" } }
+    ],
+    "xp": 15,
+    "character_reaction": { "correct": "cheer", "wrong": "encourage" }
+  },
+  {
+    "id": "emotions-quiz-gift-01",
+    "mode": "baby",
+    "subject": "emotions",
+    "type": "quiz",
+    "content": { "en": "Foxy got a gift! How is Foxy feeling? 🎁", "te": "Foxy కి బహుమతి వచ్చింది! Foxy ఎలా ఉంది? 🎁", "es": "¡Foxy recibió un regalo! ¿Cómo se siente Foxy? 🎁" },
+    "answer": "happy",
+    "choices": ["happy", "sad", "angry"],
+    "choiceLabels": [
+      { "en": "Happy 😊", "te": "సంతోషంగా 😊", "es": "Feliz 😊" },
+      { "en": "Sad 😢",   "te": "దుఃఖంగా 😢",   "es": "Triste 😢" },
+      { "en": "Angry 😠", "te": "కోపంగా 😠",    "es": "Enojado 😠" }
+    ],
+    "xp": 10,
+    "character_reaction": { "correct": "cheer", "wrong": "encourage" }
+  },
+  {
+    "id": "emotions-tap-sad-01",
+    "mode": "baby",
+    "subject": "emotions",
+    "type": "tap",
+    "content": { "en": "Tap the sad face!", "te": "దుఃఖ ముఖాన్ని నొక్కు!", "es": "¡Toca la cara triste!" },
+    "items": [
+      { "id": "happy",     "emoji": "😊", "label": { "en": "Happy",     "te": "సంతోషంగా",  "es": "Feliz"      } },
+      { "id": "sad",       "emoji": "😢", "label": { "en": "Sad",       "te": "దుఃఖంగా",    "es": "Triste"     } },
+      { "id": "angry",     "emoji": "😠", "label": { "en": "Angry",     "te": "కోపంగా",     "es": "Enojado"    } },
+      { "id": "surprised", "emoji": "😲", "label": { "en": "Surprised", "te": "ఆశ్చర్యంగా", "es": "Sorprendido" } }
+    ],
+    "answer": "sad",
+    "xp": 10,
+    "character_reaction": { "correct": "cheer", "wrong": "encourage" }
+  }
+]
