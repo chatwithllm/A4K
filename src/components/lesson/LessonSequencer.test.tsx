@@ -1,7 +1,7 @@
 import { describe, it, expect, vi } from 'vitest'
 import { render, screen, fireEvent } from '@testing-library/react'
 import { LessonSequencer } from './LessonSequencer'
-import type { Lesson, QuizLesson } from '../../content/types'
+import type { QuizLesson } from '../../content/types'
 
 const makeQuiz = (id: string, question: string): QuizLesson => ({
   id,
