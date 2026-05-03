@@ -1,0 +1,62 @@
+[
+  {
+    "id": "colors-red-01",
+    "mode": "baby",
+    "subject": "colors",
+    "type": "quiz",
+    "content": {
+      "en": "What color is the apple? 🍎",
+      "te": "యాపిల్ రంగు ఏమిటి? 🍎",
+      "es": "¿De qué color es la manzana? 🍎"
+    },
+    "answer": "red",
+    "choices": ["red", "blue", "green"],
+    "choiceLabels": [
+      { "en": "Red", "te": "ఎరుపు", "es": "Rojo" },
+      { "en": "Blue", "te": "నీలం", "es": "Azul" },
+      { "en": "Green", "te": "ఆకుపచ్చ", "es": "Verde" }
+    ],
+    "xp": 10,
+    "character_reaction": { "correct": "cheer", "wrong": "encourage" }
+  },
+  {
+    "id": "colors-blue-01",
+    "mode": "baby",
+    "subject": "colors",
+    "type": "quiz",
+    "content": {
+      "en": "What color is the sky? ☁️",
+      "te": "ఆకాశం రంగు ఏమిటి? ☁️",
+      "es": "¿De qué color es el cielo? ☁️"
+    },
+    "answer": "blue",
+    "choices": ["red", "blue", "yellow"],
+    "choiceLabels": [
+      { "en": "Red", "te": "ఎరుపు", "es": "Rojo" },
+      { "en": "Blue", "te": "నీలం", "es": "Azul" },
+      { "en": "Yellow", "te": "పసుపు", "es": "Amarillo" }
+    ],
+    "xp": 10,
+    "character_reaction": { "correct": "cheer", "wrong": "encourage" }
+  },
+  {
+    "id": "colors-green-01",
+    "mode": "baby",
+    "subject": "colors",
+    "type": "quiz",
+    "content": {
+      "en": "What color is the frog? 🐸",
+      "te": "కప్ప రంగు ఏమిటి? 🐸",
+      "es": "¿De qué color es la rana? 🐸"
+    },
+    "answer": "green",
+    "choices": ["green", "purple", "orange"],
+    "choiceLabels": [
+      { "en": "Green", "te": "ఆకుపచ్చ", "es": "Verde" },
+      { "en": "Purple", "te": "వంగపండు", "es": "Morado" },
+      { "en": "Orange", "te": "నారంగి", "es": "Naranja" }
+    ],
+    "xp": 10,
+    "character_reaction": { "correct": "cheer", "wrong": "encourage" }
+  }
+]
